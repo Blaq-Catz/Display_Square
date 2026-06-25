@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execution Portfolio & Case Studies | Display Square</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.php" class="brand-container">
+            <img src="Images/logo.png" alt="Display Square Logo" class="custom-logo" onerror="this.style.display='none'">
+            <div class="logo">DISPLAY SQUARE</div>
+        </a>
+        <div class="menu-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        <nav class="nav-center">
+            <ul class="nav-links">
+                <li class="close-menu-li"><button class="close-menu" aria-label="Close menu">&times;</button></li>
+                <li class="mobile-search">
+                    <form action="portfolio.php" method="GET" class="search-form">
+                        <input type="text" name="query" placeholder="Search case studies..." class="search-input">
+                        <button type="submit" class="search-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                    </form>
+                </li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="portfolio.php" class="active-link">Portfolio</a></li>
+                <li><a href="blog.php">Insights</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <form action="portfolio.php" method="GET" class="search-form">
+                <input type="text" name="query" placeholder="Search case studies..." class="search-input">
+                <button type="submit" class="search-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+            </form>
+        </div>
+    </header>
+
+    <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1567449303078-57ad995bd3fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="header-content reveal" id="portfolio-header">
+            <h1>Execution Case Studies</h1>
+            <p>Proven environmental branding delivered across Africa.</p>
+        </div>
+    </section>
+
+    <section class="portfolio-case-studies" style="padding-top: 4rem;">
+        
+        <div class="portfolio-filter-bar reveal">
+            <span class="filter-pill active" data-filter="all">All Case Studies</span>
+            <span class="filter-pill" data-filter="banking">Banking & Finance</span>
+            <span class="filter-pill" data-filter="retail">Retail Flagships</span>
+            <span class="filter-pill" data-filter="corporate">Multinational HQs</span>
+        </div>
+
+        <div id="no-results" style="display: none; text-align: center; padding: 4rem 0;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--accent-blue);">No matching commercial audits found.</h2>
+            <p style="color: var(--text-muted); margin-top: 1rem;">Try searching for "Aura", "Wayfinding", "OSRAM", or "Aluminum".</p>
+        </div>
+
+        <div class="portfolio-gallery-grid" id="portfolio-grid">
+            
+            <div class="case-study-card reveal" data-category="retail">
+                <div class="card-thumb">
+                    <span class="sector-badge">RETAIL ROLLOUT</span>
+                    <img src="https://images.unsplash.com/photo-1567449303078-57ad995bd3fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aura">
+                </div>
+                <div class="card-brief">
+                    <span class="client-org">AURA LUXURY GROUP</span>
+                    <h3>Flagship Storefront Facade & Illumination Rollout</h3>
+                    <p class="brief-snippet">Redesign, fabricate, and deploy an illuminated architectural storefront facade across 14 ECOWAS retail boutiques with zero store downtime.</p>
+                    <div class="scope-tags"><span>Marine Aluminum</span><span>Cast UV-Acrylic</span><span>OSRAM LED</span><span>Night Install</span></div>
+                    <button class="view-case-btn open-case-modal" data-case="aura">Review Complete Case Study <span class="arrow">&rarr;</span></button>
+                </div>
+            </div>
+
+            <div class="case-study-card reveal" data-category="corporate">
+                <div class="card-thumb">
+                    <span class="sector-badge">INTERIOR BRANDING</span>
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Studio V">
+                </div>
+                <div class="card-brief">
+                    <span class="client-org">STUDIO V ARCHITECTS</span>
+                    <h3>Custom Environmental Neon & Interior Signage Matrix</h3>
+                    <p class="brief-snippet">Engineer an interior brand environment and structural directional signage system for a sprawling 4,500sqm commercial design hub.</p>
+                    <div class="scope-tags"><span>Silicone Extrusion</span><span>CNC Heat Sinks</span><span>Satin Brass</span><span>Fire Audited</span></div>
+                    <button class="view-case-btn open-case-modal" data-case="studiov">Review Complete Case Study <span class="arrow">&rarr;</span></button>
+                </div>
+            </div>
+
+            <div class="case-study-card reveal" data-category="banking">
+                <div class="card-thumb">
+                    <span class="sector-badge">CAMPUS WAYFINDING</span>
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nexus">
+                </div>
+                <div class="card-brief">
+                    <span class="client-org">NEXUS MULTINATIONAL</span>
+                    <h3>Structural Campus Monument & Wayfinding Directory</h3>
+                    <p class="brief-snippet">Design and erect a 7-meter exterior structural monument pylon and intuitive vehicular/pedestrian wayfinding for a 12-building campus.</p>
+                    <div class="scope-tags"><span>Structural I-Beams</span><span>Concrete Footings</span><span>Outdoor P4 LED</span></div>
+                    <button class="view-case-btn open-case-modal" data-case="nexus">Review Complete Case Study <span class="arrow">&rarr;</span></button>
+                </div>
+            </div>
+
+            <div class="case-study-card reveal" data-category="retail">
+                <div class="card-thumb">
+                    <span class="sector-badge">POS FIXTURES</span>
+                    <img src="https://images.unsplash.com/photo-1541888079213-718e2beab88e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Elevate">
+                </div>
+                <div class="card-brief">
+                    <span class="client-org">ELEVATE RETAIL CHAINS</span>
+                    <h3>National Point of Sale (POS) Fixture Rollout</h3>
+                    <p class="brief-snippet">Mass-produce and distribute 250 standardized visual merchandising modular floor displays across retail branches nationwide.</p>
+                    <div class="scope-tags"><span>Powder-Coated Steel</span><span>Magnetic Lightboxes</span><span>Flat-Pack Transit</span></div>
+                    <button class="view-case-btn open-case-modal" data-case="elevate">Review Complete Case Study <span class="arrow">&rarr;</span></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="case-modal-overlay" id="case-study-modal">
+        <div class="case-modal-box">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <span class="client-tag">CLIENT HOLDING GROUP</span>
+                <h2 class="case-title">Turnkey Project Execution Title</h2>
+                <p class="case-brief" style="color: var(--steel-grey); font-size: 1.15rem; max-width: 800px; line-height: 1.6;">Executive summary of the commercial project brief delivered for the organization.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid-2">
+                    <div class="modal-section"><h4>01. The Commercial Challenge</h4><p class="case-challenge">Breakdown of the technical hurdles, municipal compliance risks, or environmental exposure issues.</p></div>
+                    <div class="modal-section"><h4>02. The Engineered Solution</h4><p class="case-solution">Detailed breakdown of the structural calculations, lighting modules, and fixing methodologies applied.</p></div>
+                </div>
+                <div class="modal-grid-2">
+                    <div class="modal-section"><h4>03. Materials & Specification</h4><p class="case-materials">Architectural steel, cast acrylics, LED modules.</p></div>
+                    <div class="modal-section"><h4>04. Turnkey Execution Scope</h4><p class="case-scope">Permitting, engineering, night installation.</p></div>
+                </div>
+                <div class="modal-grid-2" style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem;">
+                    <div class="modal-section"><h4>05. Completion Timeline</h4><p class="case-timeline" style="color: #ffffff; font-weight: 700;">45 Days Turnkey</p></div>
+                    <div class="modal-section"><h4>06. Commercial Outcome</h4><p class="case-results" style="color: var(--accent-gold); font-weight: 700;">+42% foot traffic increase.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container reveal">
+            <div class="footer-col"><div class="brand-container" style="margin-bottom: 1rem;"><div class="logo">DISPLAY SQUARE</div></div><p>Locally engineered and built in Nigeria 🇳🇬. Global standard commercial craftsmanship engineered for uncompromised structural impact across Africa.</p></div>
+            <div class="footer-col"><h4>Commercial Matrix</h4><ul><li><a href="about.php">Manufacturing Plant</a></li><li><a href="services.php">Solution Architectures</a></li><li><a href="portfolio.php">Execution Case Studies</a></li><li><a href="blog.php">Technical Insights</a></li></ul></div>
+            <div class="footer-col"><h4>Procurement Desk</h4><p style="color: #ffffff;">123 Design Avenue,<br>Industrial Zone, Creative District, Lagos.</p><p style="margin-top: 1rem;">Direct: +234 (0) 800 DISPLAY<br>Inquiries: studio@displaysquare.com</p></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 Display Square Ltd. All rights reserved.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

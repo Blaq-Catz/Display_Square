@@ -1,0 +1,146 @@
+<?php require __DIR__ . '/cms/bootstrap.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution Architectures & Services Matrix | Display Square</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.php" class="brand-container">
+            <img src="Images/logo.png" alt="Display Square Logo" class="custom-logo" onerror="this.style.display='none'">
+            <div class="logo">DISPLAY SQUARE</div>
+        </a>
+        <div class="menu-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        <nav class="nav-center">
+            <ul class="nav-links">
+                <li class="close-menu-li"><button class="close-menu" aria-label="Close menu">&times;</button></li>
+                <li class="mobile-search">
+                    <form action="portfolio.php" method="GET" class="search-form">
+                        <input type="text" name="query" placeholder="Search capabilities..." class="search-input">
+                        <button type="submit" class="search-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                    </form>
+                </li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="services.php" class="active-link">Services</a></li>
+                <li><a href="portfolio.php">Portfolio</a></li>
+                <li><a href="blog.php">Insights</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <form action="portfolio.php" method="GET" class="search-form">
+                <input type="text" name="query" placeholder="Search capabilities..." class="search-input">
+                <button type="submit" class="search-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+            </form>
+        </div>
+    </header>
+
+    <section class="page-header" style="<?php echo cms_bg('services_header', 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); ?>">
+        <div class="header-content reveal">
+            <h1>Solution-Based Architecture</h1>
+            <p>Structuring our capabilities around commercial outcomes.</p>
+        </div>
+    </section>
+
+    <section class="strategy-shift reveal" style="padding-bottom: 4rem;">
+        <div class="section-heading">
+            <span class="eyebrow" style="margin-bottom: 1rem;">COMMERCIAL PARTNERSHIP</span>
+            <h2>Execution Rather Than Mere Procurement</h2>
+            <p>Every solution delivered by Display Square explicitly answers the rigorous technical criteria demanded by modern corporate facility managers and procurement directors.</p>
+        </div>
+    </section>
+
+    <section class="solution-matrix dark-section reveal" style="padding-top: 6rem;">
+        <div class="solution-editorial-block">
+            
+            <div class="solution-row">
+                <div class="solution-specs">
+                    <span class="eyebrow" style="margin-bottom: 1rem;">PILLAR 01 MATRIX</span>
+                    <h3>Retail Displays & Visual Merchandising</h3>
+                    <p class="lead-desc">Engineered product staging systems designed to maximize branch sales per square meter and ensure rapid multi-branch visual uniformity.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><h5>WHAT IS INCLUDED</h5><p>Turnkey POP/POS modular units, backlit window displays, and magnetic graphic frames.</p></div>
+                        <div class="spec-item"><h5>WHO IS IT FOR</h5><p>Retail Store Chains, Supermarket Networks, and Telecom Flagship branches.</p></div>
+                        <div class="spec-item"><h5>TYPICAL SCALE</h5><p>50 to 500 standardized modular branch units deployed simultaneously.</p></div>
+                        <div class="spec-item"><h5>MATERIALS USED</h5><p>Powder-coated mild steel tubing, cast acrylics, HIPS, and edge-lit LED panels.</p></div>
+                        <div class="spec-item"><h5>PROCESS OVERVIEW</h5><p>Ergonomic Prototyping &rarr; Automated Bending &rarr; Flat-Pack Distribution.</p></div>
+                        <div class="spec-item"><h5>EXPECTED OUTCOMES</h5><p>Zero in-store assembly tool requirements; 100% brand graphic uniformity.</p></div>
+                    </div>
+                    <a href="contact.php" class="btn">Book VM Rollout Audit</a>
+                </div>
+                <div class="solution-img-box"><img src="<?php echo e(cms_media_url('services_retail', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')); ?>" alt="Retail VM"></div>
+            </div>
+
+            <div class="solution-row reverse">
+                <div class="solution-specs">
+                    <span class="eyebrow" style="margin-bottom: 1rem;">PILLAR 02 MATRIX</span>
+                    <h3>Architectural Signage Systems</h3>
+                    <p class="lead-desc">Structural exterior monuments and high-altitude illuminated brand marks built to withstand severe wind loads and coastal solar radiation.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><h5>WHAT IS INCLUDED</h5><p>Reinforced concrete footings, internal steel framing, ACP cladding, OSRAM LEDs.</p></div>
+                        <div class="spec-item"><h5>WHO IS IT FOR</h5><p>Commercial Bank Chains, Multinational HQs, and Industrial Retail Parks.</p></div>
+                        <div class="spec-item"><h5>TYPICAL SCALE</h5><p>5m to 12m structural monument pylons; high-altitude rooftop lettering.</p></div>
+                        <div class="spec-item"><h5>MATERIALS USED</h5><p>Structural Steel I-Beams, Marine Grade Aluminum, Cast UV-Acrylic, OSRAM IP68 LED.</p></div>
+                        <div class="spec-item"><h5>PROCESS OVERVIEW</h5><p>Soil/Wind Engineering &rarr; Heavy MIG Welding &rarr; Crane Site Erection.</p></div>
+                        <div class="spec-item"><h5>EXPECTED OUTCOMES</h5><p>Flawless municipal structural audit; guaranteed 5-year zero-yellowing acrylic.</p></div>
+                    </div>
+                    <a href="contact.php" class="btn">Book Structural Sign Audit</a>
+                </div>
+                <div class="solution-img-box"><img src="<?php echo e(cms_media_url('services_signage', 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')); ?>" alt="Signage"></div>
+            </div>
+
+            <div class="solution-row">
+                <div class="solution-specs">
+                    <span class="eyebrow" style="margin-bottom: 1rem;">PILLAR 03 MATRIX</span>
+                    <h3>Corporate Wayfinding & Navigation</h3>
+                    <p class="lead-desc">Intuitive environmental graphic systems that guide human traffic seamlessly through complex, multi-acre corporate real estate.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><h5>WHAT IS INCLUDED</h5><p>Vehicular directional pylons, minimalist lobby totems, ADA room plaques.</p></div>
+                        <div class="spec-item"><h5>WHO IS IT FOR</h5><p>Corporate HQs, University Campuses, Hospitals, and Government Secretariats.</p></div>
+                        <div class="spec-item"><h5>TYPICAL SCALE</h5><p>Comprehensive 100+ directional marker audits for multi-building facilities.</p></div>
+                        <div class="spec-item"><h5>MATERIALS USED</h5><p>Brushed Anodized Aluminum, CNC Wood Joinery, Braille/Tactile Acrylics.</p></div>
+                        <div class="spec-item"><h5>PROCESS OVERVIEW</h5><p>Human Traffic Flow Audit &rarr; Modular Fabrication &rarr; Phased Site Fixing.</p></div>
+                        <div class="spec-item"><h5>EXPECTED OUTCOMES</h5><p>Elimination of visitor transit confusion; elevated professional campus aesthetic.</p></div>
+                    </div>
+                    <a href="contact.php" class="btn">Book Wayfinding Audit</a>
+                </div>
+                <div class="solution-img-box"><img src="<?php echo e(cms_media_url('services_wayfinding', 'https://images.unsplash.com/photo-1541888079213-718e2beab88e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')); ?>" alt="Wayfinding"></div>
+            </div>
+
+            <div class="solution-row reverse">
+                <div class="solution-specs">
+                    <span class="eyebrow" style="margin-bottom: 1rem;">PILLAR 04 MATRIX</span>
+                    <h3>Commercial Branded Interiors</h3>
+                    <p class="lead-desc">Immersive interior architecture that translates abstract corporate identity guidelines directly into premium physical office environments.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><h5>WHAT IS INCLUDED</h5><p>Backlit stone/acrylic reception walls, acoustic timber fins, frosted glass vinyls.</p></div>
+                        <div class="spec-item"><h5>WHO IS IT FOR</h5><p>Executive Boardrooms, Tech Hubs, Law Firms, and Bank Wealth Lounges.</p></div>
+                        <div class="spec-item"><h5>TYPICAL SCALE</h5><p>500sqm to 3,000sqm turnkey interior graphic and lighting manifestations.</p></div>
+                        <div class="spec-item"><h5>MATERIALS USED</h5><p>Translucent Onyx stone, Recessed Low-Voltage LED extrusions, Satin Brass.</p></div>
+                        <div class="spec-item"><h5>PROCESS OVERVIEW</h5><p>Architectural CAD Coordination &rarr; Off-site Joinery &rarr; Weekend Install.</p></div>
+                        <div class="spec-item"><h5>EXPECTED OUTCOMES</h5><p>Zero interference with ongoing office hours; uncompromised acoustic privacy.</p></div>
+                    </div>
+                    <a href="contact.php" class="btn">Book Interior Branding Audit</a>
+                </div>
+                <div class="solution-img-box"><img src="<?php echo e(cms_media_url('services_interiors', 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')); ?>" alt="Interiors"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container reveal">
+            <div class="footer-col"><div class="brand-container" style="margin-bottom: 1rem;"><div class="logo">DISPLAY SQUARE</div></div><p>Locally engineered and built in Nigeria 🇳🇬. Global standard commercial craftsmanship engineered for uncompromised structural impact across Africa.</p></div>
+            <div class="footer-col"><h4>Commercial Matrix</h4><ul><li><a href="about.php">Manufacturing Plant</a></li><li><a href="services.php">Solution Architectures</a></li><li><a href="portfolio.php">Execution Case Studies</a></li><li><a href="blog.php">Technical Insights</a></li></ul></div>
+            <div class="footer-col"><h4>Procurement Desk</h4><p style="color: #ffffff;">123 Design Avenue,<br>Industrial Zone, Creative District, Lagos.</p><p style="margin-top: 1rem;">Direct: +234 (0) 800 DISPLAY<br>Inquiries: studio@displaysquare.com</p></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 Display Square Ltd. All rights reserved.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

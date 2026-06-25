@@ -1,0 +1,301 @@
+<?php require __DIR__ . '/cms/bootstrap.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Square | Design, Fabrication & Environmental Branding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.php" class="brand-container">
+            <img src="Images/logo.png" alt="Display Square Logo" class="custom-logo" onerror="this.style.display='none'">
+            <div class="logo">DISPLAY SQUARE</div>
+        </a>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+
+        <nav class="nav-center">
+            <ul class="nav-links">
+                <li class="close-menu-li"><button class="close-menu" aria-label="Close menu">&times;</button></li>
+                <li class="mobile-search">
+                    <form action="portfolio.php" method="GET" class="search-form">
+                        <input type="text" name="query" placeholder="Search capabilities..." class="search-input">
+                        <button type="submit" class="search-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                    </form>
+                </li>
+                <li><a href="index.php" class="active-link">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="portfolio.php">Portfolio</a></li>
+                <li><a href="blog.php">Insights</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-right">
+            <form action="portfolio.php" method="GET" class="search-form">
+                <input type="text" name="query" placeholder="Search capabilities..." class="search-input">
+                <button type="submit" class="search-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+            </form>
+        </div>
+    </header>
+
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="slide active" style="<?php echo cms_bg('home_hero_1', 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); ?>">
+                <div class="slide-content">
+                    <span class="eyebrow">DESIGN • FABRICATION • INSTALLATION</span>
+                    <h1>High-Impact Branded Environments at Scale.</h1>
+                    <p>We design, fabricate, and deploy premium architectural signages, retail display systems, and commercial interiors for leading organizations across Africa.</p>
+                    <div class="btn-group">
+                        <a href="services.php" class="btn">Explore Capabilities</a>
+                        <a href="portfolio.php" class="btn btn-secondary">View Case Studies</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="<?php echo cms_bg('home_hero_2', 'https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); ?>">
+                <div class="slide-content">
+                    <span class="eyebrow">TURNKEY COMMERCIAL FABRICATION</span>
+                    <h1>Engineered for Delivery Confidence.</h1>
+                    <p>Operating a state-of-the-art metal, acrylic, and composite manufacturing facility in Nigeria, guaranteeing uncompromised quality control and ECOWAS regional deployment.</p>
+                    <div class="btn-group">
+                        <a href="about.php" class="btn">Our Infrastructure</a>
+                        <a href="contact.php" class="btn btn-secondary">Request Procurement Audit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="<?php echo cms_bg('home_hero_3', 'https://images.unsplash.com/photo-1541888079213-718e2beab88e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); ?>">
+                <div class="slide-content">
+                    <span class="eyebrow">END-TO-END WAYFINDING SYSTEMS</span>
+                    <h1>Navigating Corporate Campuses.</h1>
+                    <p>Comprehensive interior and exterior environmental graphics engineered specifically for corporate headquarters, bank chains, and public institutions.</p>
+                    <div class="btn-group">
+                        <a href="portfolio.php" class="btn">Review Portfolio</a>
+                        <a href="services.php" class="btn btn-secondary">Service SLA Breakdown</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+        <div class="carousel-dots">
+            <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+    </section>
+
+    <div class="client-logos-banner">
+        <div class="client-logos-track">
+            <span class="client-logo-item">AURA LUXURY GROUP</span>
+            <span class="client-logo-item">GTBANK FLAGSHIPS</span>
+            <span class="client-logo-item">STUDIO V ARCHITECTS</span>
+            <span class="client-logo-item">ZENITH HOLDINGS</span>
+            <span class="client-logo-item">NEXUS MULTINATIONAL</span>
+            <span class="client-logo-item">MTN TELECOM</span>
+        </div>
+    </div>
+
+    <section class="quick-answers dark-section reveal">
+        <div class="section-heading">
+            <span class="eyebrow" style="margin-bottom: 1rem;">OPERATIONAL TRANSPARENCY</span>
+            <h2>Execution Confidence & Delivery Scope</h2>
+            <p>Answering the critical technical questions required by modern corporate procurement teams and real estate developers.</p>
+        </div>
+        <div class="capability-answers-grid">
+            <div class="answer-card">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                <h3>What & Who We Serve</h3>
+                <p>We deliver physical environmental branding solutions for Tier-1 Banks, Retail Chains, Multinationals, and Government Facilities requiring strict commercial reliability.</p>
+            </div>
+            <div class="answer-card">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h3>In-House Fabrication Plant</h3>
+                <p>Yes. We do not outsource production. We operate advanced metal bending, laser acrylic cutting, timber joinery, and digital printing machinery directly in-house in Lagos.</p>
+            </div>
+            <div class="answer-card">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <h3>Turnkey Install & SLA Support</h3>
+                <p>Our dedicated certified deployment teams manage nationwide installation across Nigeria and ECOWAS, backed by 24/7 preventive lighting maintenance contracts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-pillars reveal">
+        <div class="section-heading left-align" style="max-width: 100%;">
+            <span class="eyebrow" style="margin-bottom: 1rem;">CORE COMPETENCIES</span>
+            <h2>Our 6 Execution Pillars</h2>
+        </div>
+        <div class="services-matrix-grid">
+            <div class="service-pillar-card">
+                <div class="pillar-img"><img src="<?php echo e(cms_media_url('home_pillar_1', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')); ?>" alt="Retail Displays"></div>
+                <div class="pillar-content">
+                    <span class="pillar-num">PILLAR 01</span>
+                    <h3>Retail Displays & Visual Merchandising</h3>
+                    <ul class="pillar-list">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> POP & POS Display Fixtures</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Premium Window Installations</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-Branch VM Rollouts</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Interactive Product Pods</li>
+                    </ul>
+                    <a href="services.php" class="pillar-cta">Solution Matrix Breakdown <span class="arrow">&rarr;</span></a>
+                </div>
+            </div>
+            <div class="service-pillar-card">
+                <div class="pillar-img"><img src="<?php echo e(cms_media_url('home_pillar_2', 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')); ?>" alt="Signage Systems"></div>
+                <div class="pillar-content">
+                    <span class="pillar-num">PILLAR 02</span>
+                    <h3>Architectural Signage Systems</h3>
+                    <ul class="pillar-list">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Illuminated Exterior Pylons</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> High-Altitude Building Letters</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Outdoor P4 Digital LED Screens</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Precision Monument Marks</li>
+                    </ul>
+                    <a href="services.php" class="pillar-cta">Solution Matrix Breakdown <span class="arrow">&rarr;</span></a>
+                </div>
+            </div>
+            <div class="service-pillar-card">
+                <div class="pillar-img"><img src="<?php echo e(cms_media_url('home_pillar_3', 'https://images.unsplash.com/photo-1541888079213-718e2beab88e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')); ?>" alt="Corporate Wayfinding"></div>
+                <div class="pillar-content">
+                    <span class="pillar-num">PILLAR 03</span>
+                    <h3>Corporate Wayfinding & Navigation</h3>
+                    <ul class="pillar-list">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Sprawling Campus Directories</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Minimalist Floor Directories</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Smart Meeting Room Plaques</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> ADA-Compliant Healthcare VM</li>
+                    </ul>
+                    <a href="services.php" class="pillar-cta">Solution Matrix Breakdown <span class="arrow">&rarr;</span></a>
+                </div>
+            </div>
+            <div class="service-pillar-card">
+                <div class="pillar-img"><img src="<?php echo e(cms_media_url('home_pillar_4', 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')); ?>" alt="Commercial Interiors"></div>
+                <div class="pillar-content">
+                    <span class="pillar-num">PILLAR 04</span>
+                    <h3>Commercial Branded Interiors</h3>
+                    <ul class="pillar-list">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Illuminated Reception Backdrops</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Acoustic Feature Walls</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Corporate Environmental Art</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Architectural Glass Manifestations</li>
+                    </ul>
+                    <a href="services.php" class="pillar-cta">Solution Matrix Breakdown <span class="arrow">&rarr;</span></a>
+                </div>
+            </div>
+            <div class="service-pillar-card">
+                <div class="pillar-img"><img src="<?php echo e(cms_media_url('home_pillar_5', 'https://images.unsplash.com/photo-1511289081-d06dda19034d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')); ?>" alt="Exhibition Spaces"></div>
+                <div class="pillar-content">
+                    <span class="pillar-num">PILLAR 05</span>
+                    <h3>Exhibition & Experience Spaces</h3>
+                    <ul class="pillar-list">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Trade Pavilions</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Permanent Museum Exhibits</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Corporate Visitor Centres</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Immersive Brand Activations</li>
+                    </ul>
+                    <a href="services.php" class="pillar-cta">Solution Matrix Breakdown <span class="arrow">&rarr;</span></a>
+                </div>
+            </div>
+            <div class="service-pillar-card">
+                <div class="pillar-img"><img src="<?php echo e(cms_media_url('home_pillar_6', 'https://images.unsplash.com/photo-1567449303078-57ad995bd3fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')); ?>" alt="Fabrication Plant"></div>
+                <div class="pillar-content">
+                    <span class="pillar-num">PILLAR 06</span>
+                    <h3>In-House Fabrication & Production</h3>
+                    <ul class="pillar-list">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Heavy Structural Metal Welding</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Precision CNC Acrylic Molding</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Architectural Timber Carpentry</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Composite ACP Bending</li>
+                    </ul>
+                    <a href="about.php" class="pillar-cta">Manufacturing Infrastructure <span class="arrow">&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="industries dark-section reveal" style="padding-top: 6rem; padding-bottom: 6rem;">
+        <div class="section-heading">
+            <span class="eyebrow" style="margin-bottom: 1rem;">COMMERCIAL ACCEPTANCE</span>
+            <h2 style="font-size: 2.5rem;">Sectors We Execute For</h2>
+        </div>
+        <div class="industries-grid">
+            <div class="industry-box"><h5>BANKING & FINANCE</h5></div>
+            <div class="industry-box"><h5>RETAIL CHAINS</h5></div>
+            <div class="industry-box"><h5>TELECOMMUNICATIONS</h5></div>
+            <div class="industry-box"><h5>HOSPITALITY</h5></div>
+            <div class="industry-box"><h5>REAL ESTATE DEV</h5></div>
+            <div class="industry-box"><h5>HEALTHCARE</h5></div>
+            <div class="industry-box"><h5>GOVERNMENT</h5></div>
+            <div class="industry-box"><h5>EXHIBITIONS</h5></div>
+        </div>
+    </section>
+
+    <section class="why-us reveal">
+        <div class="section-heading">
+            <span class="eyebrow" style="margin-bottom: 1rem;">STRATEGIC DIFFERENTIATION</span>
+            <h2>Why Organizations Partner With Us</h2>
+            <p>Moving beyond mere vendor relationships into structured commercial execution.</p>
+        </div>
+        <div class="why-pillars-grid">
+            <div class="why-card">
+                <h4 style="color: var(--accent-gold);">01. Single-Point Liability</h4>
+                <p>Because we integrate conceptual design with structural in-house fabrication under one roof, we eliminate finger-pointing between separate design studios and local welders.</p>
+            </div>
+            <div class="why-card">
+                <h4 style="color: var(--accent-gold);">02. ECOWAS Scalability</h4>
+                <p>We possess the logistics fleet and certified installation teams required to execute multi-branch visual merchandising rollouts simultaneously across Nigeria, Ghana, and ECOWAS.</p>
+            </div>
+            <div class="why-card">
+                <h4 style="color: var(--accent-gold);">03. Preventive Aftercare SLAs</h4>
+                <p>A sign that fails in the dark damages brand equity. We offer structured 24/7 preventive electrical and cleaning maintenance contracts to ensure 100% lumen uptime.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials reveal" style="padding-top: 0;">
+        <div class="section-heading">
+            <span class="eyebrow" style="margin-bottom: 1rem;">MARKET VERIFICATION</span>
+            <h2>Client Delivery Voices</h2>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="quote">"Display Square successfully rolled out our flagship exterior signage across 14 branches without disrupting store operations. Their technical competence and adherence to safety protocols was impeccable."</p>
+                <div class="client-info"><h5>Sarah Jenkins</h5><span>Head of Procurement, Aura Luxury</span></div>
+            </div>
+            <div class="testimonial-card">
+                <p class="quote">"They didn't just design a wayfinding directory; their engineering team calculated the wind shear and reinforced the concrete footings for our 7-meter campus pylon. Highly recommended execution partner."</p>
+                <div class="client-info"><h5>Marcus Thorne</h5><span>Facilities Director, Nexus Group</span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container reveal">
+            <div class="footer-col">
+                <div class="brand-container" style="margin-bottom: 1rem;"><div class="logo">DISPLAY SQUARE</div></div>
+                <p>Locally engineered and built in Nigeria 🇳🇬. Global standard commercial craftsmanship engineered for uncompromised structural impact across Africa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Commercial Matrix</h4>
+                <ul>
+                    <li><a href="about.php">Manufacturing Plant</a></li>
+                    <li><a href="services.php">Solution Architectures</a></li>
+                    <li><a href="portfolio.php">Execution Case Studies</a></li>
+                    <li><a href="blog.php">Technical Insights</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Procurement Desk</h4>
+                <p style="color: #ffffff;">123 Design Avenue,<br>Industrial Zone, Creative District, Lagos.</p>
+                <p style="margin-top: 1rem;">Direct: +234 (0) 800 DISPLAY<br>Inquiries: studio@displaysquare.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 Display Square Ltd. All rights reserved. Registered Execution Contractor.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
